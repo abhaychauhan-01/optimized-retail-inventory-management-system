@@ -1,0 +1,131 @@
+{
+  "trained_model_available": true,
+  "model_name": "RandomForestRegressor",
+  "prediction_target": "daily_sales",
+  "training_timestamp": "2026-10-30T03:47:59+00:00",
+  "dataset_source": "data/raw/dataset_augmented.csv",
+  "dataset_type": "Mixed",
+  "contains_synthetic_data": true,
+  "source_provenance_note": "Original-file rows are matched by date and all other source fields. Matching source rows does not independently establish genuine transaction history.",
+  "total_observations": 5000,
+  "original_observations": 500,
+  "synthetic_observations": 4500,
+  "products": 500,
+  "date_count": 366,
+  "date_min": "2024-01-01",
+  "date_max": "2024-12-31",
+  "columns": [
+    "date",
+    "product_id",
+    "category",
+    "season",
+    "stock_qty",
+    "reorder_level",
+    "daily_sales",
+    "unit_cost",
+    "supplier_id",
+    "lead_days"
+  ],
+  "column_types": {
+    "date": "datetime64[us]",
+    "product_id": "string",
+    "category": "string",
+    "season": "string",
+    "stock_qty": "int64",
+    "reorder_level": "int64",
+    "daily_sales": "int64",
+    "unit_cost": "float64",
+    "supplier_id": "string",
+    "lead_days": "int64"
+  },
+  "missing_values_by_column": {
+    "date": 0,
+    "product_id": 0,
+    "category": 0,
+    "season": 0,
+    "stock_qty": 0,
+    "reorder_level": 0,
+    "daily_sales": 0,
+    "unit_cost": 0,
+    "supplier_id": 0,
+    "lead_days": 0
+  },
+  "exact_duplicate_rows": 0,
+  "duplicate_product_date_excess_rows": 65,
+  "duplicate_product_date_participating_rows": 129,
+  "category_options": [
+    "Apparel",
+    "Electronics",
+    "Grocery",
+    "HomeDecor"
+  ],
+  "season_options": [
+    "Autumn",
+    "Diwali",
+    "Spring",
+    "Summer",
+    "Winter"
+  ],
+  "numeric_ranges": {
+    "stock_qty": {
+      "min": 0.0,
+      "max": 500.0
+    },
+    "reorder_level": {
+      "min": 20.0,
+      "max": 100.0
+    },
+    "daily_sales": {
+      "min": 5.0,
+      "max": 84.0
+    },
+    "unit_cost": {
+      "min": 104.22,
+      "max": 4991.74
+    },
+    "lead_days": {
+      "min": 3.0,
+      "max": 21.0
+    }
+  },
+  "numeric_medians": {
+    "stock_qty": 270.0,
+    "reorder_level": 64.0,
+    "unit_cost": 2372.58,
+    "lead_days": 12.0
+  },
+  "season_counts": {
+    "Winter": 1625,
+    "Spring": 1125,
+    "Summer": 1125,
+    "Autumn": 1027,
+    "Diwali": 98
+  },
+  "model_algorithm": "RandomForestRegressor",
+  "mae": 15.063712934184595,
+  "rmse": 17.966542288056978,
+  "r2": -0.02071953079653266,
+  "training_observations": 4087,
+  "evaluation_observations": 913,
+  "training_date_range": {
+    "start": "2024-01-01",
+    "end": "2024-10-18"
+  },
+  "testing_date_range": {
+    "start": "2024-10-19",
+    "end": "2024-12-31"
+  },
+  "features": [
+    "category",
+    "season",
+    "stock_qty",
+    "reorder_level",
+    "unit_cost",
+    "lead_days",
+    "date_month",
+    "date_day_of_week",
+    "date_day_of_year"
+  ],
+  "validation_method": "Chronological holdout by calendar date; all records from one calendar date stay in the same partition. The last 20% of unique dates are held out.",
+  "synthetic_data_limitation": "Synthetic augmented observations can make evaluation optimistic or unrepresentative and do not establish real-world predictive accuracy or validated future-demand forecasting."
+}

@@ -1,0 +1,11 @@
+column,data_type,business_meaning,validation_rules,preprocessing
+date,date,Date of the inventory observation; not a complete sales ledger.,Parseable date,Normalized to YYYY-MM-DD
+product_id,string,Source product identifier.,Non-empty identifier/category,Trimmed whitespace
+category,string,Retail category recorded for the product observation.,Non-empty identifier/category,Trimmed whitespace
+season,string,Season label recorded for the observation.,Non-empty identifier/category,Trimmed whitespace
+stock_qty,integer,On-hand stock quantity at observation time.,"Numeric, non-negative; integral values required",Coerced to numeric; invalid rows excluded and counted
+reorder_level,integer,Source-provided stock threshold.,"Numeric, non-negative; integral values required",Coerced to numeric; invalid rows excluded and counted
+daily_sales,integer,Daily sales estimate/value recorded for the observation.,"Numeric, non-negative; integral values required",Coerced to numeric; invalid rows excluded and counted
+unit_cost,number,Source unit cost; excluded from external-facing reports and exports.,Numeric and non-negative,Coerced to numeric; invalid rows excluded and counted
+supplier_id,string,Source supplier identifier; no supplier contact details are supplied.,Non-empty identifier/category,Trimmed whitespace
+lead_days,integer,Supplier lead time in days.,"Numeric, non-negative; integral values required",Coerced to numeric; invalid rows excluded and counted

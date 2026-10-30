@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+dist/
+.env
+data/inventory.db
+ml/artifacts/*.joblib
+ml/artifacts/*.pkl
+backend/artifacts/*.joblib
+dataset.csv
+data/raw/*.csv
+data/processed/*.csv
+frontend/dist/
