@@ -2,7 +2,7 @@
   "trained_model_available": true,
   "model_name": "RandomForestRegressor",
   "prediction_target": "daily_sales",
-  "training_timestamp": "2026-10-30T03:47:59+00:00",
+  "training_timestamp": "2026-10-30T17:06:15+00:00",
   "dataset_source": "data/raw/dataset_augmented.csv",
   "dataset_type": "Mixed",
   "contains_synthetic_data": true,
